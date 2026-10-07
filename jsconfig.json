@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "three": ["vendor/three/three.module.js"],
+      "three/addons/*": ["vendor/three/addons/*"],
+      "gsap": ["vendor/gsap/index.js"],
+      "gsap/*": ["vendor/gsap/*"]
+    }
+  }
+}

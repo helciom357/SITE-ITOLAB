@@ -1,0 +1,2 @@
+GSAP 3.15.0 (https://gsap.com) — ESM source files copied from https://github.com/greensock/GSAP
+Distributed under the GSAP Standard "No Charge" License: https://gsap.com/standard-license

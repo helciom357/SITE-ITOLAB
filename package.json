@@ -1,0 +1,10 @@
+{
+  "name": "site-itolab",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Site da ITO Digital Dental Lab",
+  "scripts": {
+    "build": "rm -rf assets/js && bun build src/main.js --splitting --minify --outdir assets/js --entry-naming app.js --chunk-naming 'chunks/[name]-[hash].[ext]' --target browser",
+    "dev": "bun run build && python3 -m http.server 8080"
+  }
+}

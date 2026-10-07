@@ -17,8 +17,8 @@ Toda a geometria (dentes, gengiva, suportes, disco de PMMA, placa e implantes) �
 index.html              página única
 assets/css/style.css    estilos (paleta e fontes em :root)
 assets/js/              JavaScript gerado pelo build (não editar à mão)
-assets/fonts/           Archivo variável (OFL)
-assets/img/             favicon, imagem de compartilhamento (og.jpg)
+assets/fonts/           Bebas Neue e Outfit (OFL)
+assets/img/             logo (logo/ito-logo.png|webp, fundo transparente), favicons, og.jpg
 src/                    código-fonte
   main.js               animações, rolagem, seções
   config.js             WhatsApp, e-mail, Instagram, galeria
@@ -41,9 +41,9 @@ bun run dev        # build + servidor local em http://localhost:8080
 
 - **Textos:** direto no `index.html`. Os textos das 4 etapas ficam em `src/main.js` (`STEPS`).
 - **Contatos e galeria:** `src/config.js`. A seção de galeria só aparece quando houver fotos listadas.
-- **Cores:** variáveis no topo de `assets/css/style.css`. As cores da cena 3D ficam em `src/three/shared.js` (`PALETTE`).
-- **Fontes:** a Archivo é provisória. Para trocar, coloque o arquivo em `assets/fonts/` e ajuste o `@font-face` e a `--font`.
-- **Logo:** no `index.html`, troque o conteúdo de `.brand` por `<img src="assets/img/logo/logo.svg" alt="ITO Digital Dental Lab" class="brand__img">`.
+- **Identidade:** preto, dourado `#B98A42` das artes, ouro metálico da logo (`#FCD254` → `#C69024`), champanhe `#E4B08A` e prata. As variáveis ficam no topo de `assets/css/style.css`. As cores da cena 3D ficam em `src/three/shared.js` (`PALETTE`).
+- **Fontes:** Bebas Neue nos títulos (sempre em caixa alta) e Outfit nos textos, como nas artes do Instagram. O padrão de título é linha fina em Outfit + linhas grandes em Bebas, com a última em dourado.
+- **Logo:** `assets/img/logo/ito-logo.png` e `.webp` foram gerados a partir da logo oficial, com o fundo preto removido. Para atualizar, substitua esses dois arquivos.
 
 ## Publicar
 
@@ -56,4 +56,4 @@ O site é estático. Depois do build, publique estes itens: `index.html`, `.htac
 
 - three.js: MIT (`vendor/three/LICENSE`)
 - GSAP: Standard "No Charge" License (`vendor/gsap/LICENSE.txt`)
-- Archivo: SIL Open Font License (`assets/fonts/OFL-Archivo.txt`)
+- Bebas Neue e Outfit: SIL Open Font License (`assets/fonts/OFL-*.txt`)

@@ -80,7 +80,7 @@ export class LabScene {
 
     const key = new DirectionalLight('#ffffff', 1.4);
     key.position.set(4, 8, 6);
-    const rim = new DirectionalLight('#b3a4ff', 1.1);
+    const rim = new DirectionalLight('#e8c48a', 1.0);
     rim.position.set(-6, 3, -6);
     const warm = new PointLight('#ff6a4d', 0, 12, 1.5);
     warm.position.set(3, -1, -3);

@@ -12,13 +12,13 @@ import {
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
 export const PALETTE = {
-  graphite: new Color('#0f141a'),
-  steel: new Color('#1d252e'),
+  graphite: new Color('#050404'), // brand black
+  steel: new Color('#15110d'),
   zirconia: new Color('#eef0ee'),
-  uv: new Color('#7a5cff'),
-  uvHot: new Color('#b8a6ff'),
-  ice: new Color('#bcd4ff'),
-  amber: new Color('#ffb547'),
+  uv: new Color('#d9a441'), // gold glow (cure light, seams, rings)
+  uvHot: new Color('#ffe0a0'),
+  ice: new Color('#f0d9b5'), // champagne (CAD hologram)
+  amber: new Color('#e0a43c'),
   resin: new Color('#e9e1cf'),
 };
 

@@ -164,14 +164,14 @@ export class HeroScene {
   _buildLights() {
     const key = new DirectionalLight('#ffffff', 1.15);
     key.position.set(5, 11, 7);
-    const rim = new DirectionalLight('#a9b9ff', 0.9);
+    const rim = new DirectionalLight('#cfd6e2', 0.9);
     rim.position.set(-7, 5, -8);
     const fill = new DirectionalLight('#ffe8d2', 0.18);
     fill.position.set(-6, -2, 6);
     this.scene.add(key, rim, fill);
     this.uvLight = new PointLight(PALETTE.uv, 0, 9, 1.6);
     this.uvLight.position.set(0, 0.3, 0.3);
-    this.scanLight = new PointLight('#e8f0ff', 0, 4, 2);
+    this.scanLight = new PointLight('#fff2dc', 0, 4, 2);
     this.cureLight = new PointLight(PALETTE.amber, 0, 9, 1.5);
     this.cureLight.position.set(0, 2.2, 1.2);
     this.scene.add(this.uvLight, this.scanLight, this.cureLight);
@@ -388,7 +388,7 @@ export class HeroScene {
 
     // scanner head (intraoral scanner tip + wand)
     const scanner = new Group();
-    const body = new Mesh(new CapsuleGeometry(0.15, 1.5, 6, 16), new MeshStandardMaterial({ color: '#2b333c', metalness: 0.6, roughness: 0.35 }));
+    const body = new Mesh(new CapsuleGeometry(0.15, 1.5, 6, 16), new MeshStandardMaterial({ color: '#1c1c1f', metalness: 0.6, roughness: 0.35 }));
     body.rotation.x = Math.PI / 2;
     body.position.set(0, -0.1, 0.95);
     const tip = new Mesh(new CapsuleGeometry(0.15, 0.45, 6, 12), new MeshStandardMaterial({ color: '#d9dee3', metalness: 0.3, roughness: 0.35 }));
@@ -418,11 +418,11 @@ export class HeroScene {
     this.cutPrinter = makeCut({ y: -3, dir: -1, width: 0.12, glowAmount: 3, capMix: 0.85 });
     const P = (m) => patchMaterial(m, { cut: this.cutPrinter });
 
-    const housing = P(new MeshStandardMaterial({ color: '#161c22', metalness: 0.55, roughness: 0.42 }));
-    const satin = P(new MeshStandardMaterial({ color: '#232b34', metalness: 0.7, roughness: 0.3 }));
+    const housing = P(new MeshStandardMaterial({ color: '#141416', metalness: 0.55, roughness: 0.42 }));
+    const satin = P(new MeshStandardMaterial({ color: '#1f1f22', metalness: 0.7, roughness: 0.3 }));
     const alu = P(new MeshStandardMaterial({ color: '#b9bec4', metalness: 0.92, roughness: 0.4 }));
     const aluDark = P(new MeshStandardMaterial({ color: '#8d949b', metalness: 1, roughness: 0.38 }));
-    const edge = P(new LineBasicMaterial({ color: '#3a4653', transparent: true, opacity: 0.8 }));
+    const edge = P(new LineBasicMaterial({ color: '#6b5228', transparent: true, opacity: 0.7 }));
     this.edgeMat = edge;
 
     const addEdges = (mesh) => {
@@ -527,7 +527,7 @@ export class HeroScene {
     // floor
     const floor = new Mesh(
       new PlaneGeometry(80, 80),
-      new MeshStandardMaterial({ color: '#0b0f13', roughness: 0.75, metalness: 0.2 })
+      new MeshStandardMaterial({ color: '#0a0807', roughness: 0.75, metalness: 0.2 })
     );
     floor.rotation.x = -Math.PI / 2;
     floor.position.y = -2.58;
@@ -567,7 +567,7 @@ export class HeroScene {
       fragmentShader: `uniform float uOpacity; uniform vec3 uColor; void main(){ vec2 c = gl_PointCoord-0.5; float d = dot(c,c); if(d>0.25) discard; float a = smoothstep(0.25,0.0,d)*uOpacity; gl_FragColor = vec4(uColor*a*2.0, a); }`,
     });
     const ringDots = new Points(dg, this.ringDotsMat);
-    this.turntableMat = new MeshStandardMaterial({ color: '#1b2229', metalness: 0.8, roughness: 0.25, transparent: true, opacity: 0 });
+    this.turntableMat = new MeshStandardMaterial({ color: '#1a1714', metalness: 0.8, roughness: 0.25, transparent: true, opacity: 0 });
     const table = new Mesh(new CylinderGeometry(2.6, 2.7, 0.14, 64), this.turntableMat);
     table.position.y = -0.08;
     this.turntableLine = new Mesh(
@@ -881,8 +881,8 @@ export class HeroScene {
     ctx.globalCompositeOperation = 'source-over';
     ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, W, H);
-    ctx.fillStyle = '#d9ccff';
-    ctx.strokeStyle = '#d9ccff';
+    ctx.fillStyle = '#ffe3a8';
+    ctx.strokeStyle = '#ffe3a8';
     ctx.lineCap = 'round';
     const pathArch = () => {
       ctx.beginPath();
